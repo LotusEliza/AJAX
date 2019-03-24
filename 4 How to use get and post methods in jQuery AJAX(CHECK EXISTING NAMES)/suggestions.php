@@ -1,0 +1,23 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: lotus
+ * Date: 2/14/19
+ * Time: 2:23 PM
+ */
+
+
+$existingNames = array("Daniel", "Dennis", "Danny", "Jane");
+
+if(isset($_POST['suggestion'])){
+    $name = $_POST['suggestion'];
+
+    if(!empty($name)){
+        foreach ($existingNames as $existingName){
+            if(strpos($existingName, $name) !== false){
+                echo $existingName;
+                echo "<br>";
+            }
+        }
+    }
+}
